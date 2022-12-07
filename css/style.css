@@ -1,0 +1,336 @@
+@import url('modal-aside.css');
+@import url('modal-aside__animation.css');
+@import url('modal-form.css');
+@import url('style-slider.css');
+@import url('style-aside.css');
+@import url('stylesheet.css');
+@import url('aside-animation.css');
+@import url('footer-style.css');
+@import url('btn-swap.css');
+@import url('screen-wrapper.css');
+@import url('devices-style.css');
+@import url('card-slider-style.css');
+@import url('price-details-style.css');
+@import url('card-slider-animation.css');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "TT Lakes", "Arial", sans-serif;
+  font-size: 16px;
+  background-color: #F2F2F2;
+}
+
+.header {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 16px 16px;
+  background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+}
+
+.header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  transform: translate(-16px, -16px);
+  width: 100vw;
+  height: 1px;
+  z-index: 1;
+  border-bottom: 1px solid #D9FFF5;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .header {
+      font-size: 16px;
+    }
+    .btn-swap {
+      display: none;
+    }
+    .slider-container {
+      position: relative;
+      padding: 0;
+    }
+    .swiper {
+      margin-top: 16px;
+    }
+    .swiper-wrapper {
+      box-sizing: border-box;
+      min-height: 120px;
+      padding-left: 16px;
+    }
+   
+    .swiper-prices .swiper-wrapper {
+      box-sizing: border-box;
+      min-height: 205px;
+      padding-bottom: 48px;
+    }
+    .swiper-prices .swiper-pagination {
+      bottom: 12px;  
+    }
+    .swiper-slide.devices {
+      padding: 16px;
+    }
+    .swiper-slide.prices {
+      max-width: 260px;
+      min-height: 220px;
+    }
+
+    .swiper-devices .swiper-wrapper {
+      box-sizing: border-box;
+
+      min-height: 205px;
+      padding-bottom: 32px;
+    }
+    .swiper-devices .swiper-pagination {
+      bottom: 12px;  
+    }
+    
+    .swiper-slide {
+      padding: 0;
+      max-width: 210px;
+    }
+    .swiper-slide.prices {
+      padding: 0;
+      max-width: 260px;
+    }
+
+    .swiper-slide.devices {
+      padding: 16px;
+    }
+    .swiper-slide.prices {
+      padding: 16px;
+      border-radius: 6px;
+      border: 0;
+      background-color: #FFFFFF;
+      font-family: TT Lakes;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      text-align: left;
+      
+      max-height: 200px;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      gap: 16px;
+    }
+
+    .prices .prices__item {
+      flex-basis: 100%;
+    }
+    .prices .prices__item:last-child {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+    .prices__item {
+      vertical-align: top;
+    }
+    .prices__item--title {
+      color: #7E7E82;
+    }
+    .card {
+      min-height: 72px;
+      background-color: #FFFFFF;
+      border-radius: 6px;
+      padding: 0 16px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #EAEAEA;
+    }
+    .card__item {
+      align-self: center;
+    }
+    .swiper .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+    }
+    .price-table {
+      display: none;
+    }
+    .footer { 
+      gap: 16px; 
+    }
+   .footer__item {  flex-basis: 100%; }
+}
+
+@media screen and (min-width: 768.02px) {
+
+  .price-details {
+    width: 55%;
+  }
+
+  .price-table { 
+  	border-collapse: collapse;
+    width: 94%;
+    margin: 16px auto;
+  }
+
+  .price-table__row {
+    height: 64px;
+    background-color: #FFFFFF;
+    flex-basis: 100%;
+  }
+
+  thead .price-table__row {
+    background-color: transparent;
+  }
+
+  td {
+    font-family: TT Lakes;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    white-space: nowrap;
+  
+  }
+
+  .price-table td {
+    padding-left: 16px;
+    border-right:0;
+    border-left: 0;
+    border-top: 1px solid #EAEAEA;
+    
+  }
+  .price-table__thead {
+    background-color: transparent;
+  }
+
+  .price-table__row th {
+    padding-left: 16px;
+    border-right:0;
+    border-left: 0;
+    background-color: transparent;
+    color: #7E7E82;
+    opacity: 72.18%;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  .price-table td:last-child {
+    text-align: right;
+    padding-right: 2%;
+    vertical-align: middle;
+  }
+
+  .swiper-devices .swiper-wrapper {
+    flex-wrap: nowrap;
+  }
+
+  .price-details-wrapper {
+    width: 94%;
+  }
+
+  .mobview {
+    display: none;
+  }
+
+  .header {
+    padding: 16px 3%;
+    height: 56px;
+    background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+  }
+  .slider-container {
+    width: 94%;
+    margin: 3% auto;
+  }
+  .swiper-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 3vw;
+  }
+  .swiper-wraper::after {
+    content: "";
+    display: block;
+    max-width: 24.4vw;
+  }
+  .swiper-slide {
+    height: 72px;
+    align-self: center;
+    max-width: 27vw;
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+
+  .card .card__item {
+    align-self: center;
+  }
+
+  .swiper-slide.card {
+    margin-right: 0;
+  }
+    .footer {
+      flex-wrap: nowrap;
+      width: 94%;
+      gap: 1.5%; 
+    }
+
+    .footer__item:first-child { text-align: left;}
+    .footer__item:nth-child(2) {
+      text-align: center;
+    }
+    .footer__item:last-child {
+      text-align: right;
+    }
+
+    .footer__item {
+      font-size: 14px;
+      line-height: 16px;
+      opacity: 72.18%;
+    }
+}
+
+@media screen and (min-width: 1336px) {
+  .swiper-slide, .swiper-wraper::after {
+    max-width: calc(100%/5);
+  }
+  .price-details {
+    width: 40%;
+  }
+}
+@media screen and (max-width:1440px) {
+  .aside-wrapper {
+    display:none;
+  }
+}
+.shut {
+  display: none;
+}
+
