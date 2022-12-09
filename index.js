@@ -19,6 +19,8 @@
       
     }      
     else {
+      swiper[0].params.spaceBetween = 0;
+      swiper[1].params.spaceBetween = 0;
       swiper.destroy;
     }
   });
